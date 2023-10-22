@@ -7,7 +7,7 @@ app.use(cors());
 
 app.use(express.json());
 
-app.use("/clients", require("./Clients")); // clientes
+app.use("/Jose", require("./Jose")); // clientes
 
 app.listen(PORT, () => {
     console.log(`Servidor escuchando en el puerto ${PORT}`);
