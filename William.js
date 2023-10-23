@@ -21,7 +21,7 @@ router.get("/cuadre",async (req, res)=>{
   try {
 		// Conectar a la base de datos
 		await client.connect();
-		const database = client.db("RioCuarto");
+		const database = client.db("william");
 		const cuadre = database.collection("cuadre");
 
 		// Operación
@@ -56,7 +56,7 @@ router.get("/", async (req, res) => {
 	try {
 		// Conectar a la base de datos
 		await client.connect();
-		const database = client.db("RioCuarto");
+		const database = client.db("william");
 		const clients = database.collection("clients");
 
 		// Operación
@@ -92,7 +92,7 @@ router.post("/", async (req, res) => {
 		// Conectarse al cliente
 		await client.connect();
 
-		const database = client.db("RioCuarto");
+		const database = client.db("william");
 		const clients = database.collection("clients");
 
 		const newClient = {
@@ -135,7 +135,7 @@ router.post("/:idClient/loans", async (req, res) => {
 
 		// Conectar a la base de datos
 		await client.connect();
-		const database = client.db("RioCuarto");
+		const database = client.db("william");
 		const clients = database.collection("clients");
 
 		// Convertir el id de cadena de caracteres a ObjectId
@@ -171,7 +171,7 @@ router.delete("/:idClient/loans/:idLoan", async (req, res) => {
 
 		// Conectar a la base de datos
 		await client.connect();
-		const database = client.db("RioCuarto");
+		const database = client.db("william");
 		const clients = database.collection("clients");
 
 		const objectId = new ObjectId(idClient);
@@ -234,7 +234,7 @@ router.post("/:idClient/loans/:idLoan/cuotas", async (req, res) => {
 
 		// Conectar a la base de datos
 		await client.connect();
-		const database = client.db("RioCuarto");
+		const database = client.db("william");
 		const clients = database.collection("clients");
 
 		const objectIdClient = ObjectId.createFromHexString(idClient);
@@ -300,7 +300,7 @@ router.delete("/:idClient/loans/:idLoan/cuotas/:idCuota", async (req, res) => {
 
 		// Conectar a la base de datos
 		await client.connect();
-		const database = client.db("RioCuarto");
+		const database = client.db("william");
 		const clients = database.collection("clients");
 
 
@@ -362,7 +362,7 @@ async function cuadre(prestamo, cuota, fecha) {
   console.log(fecha)
   try {
     await client.connect();
-    const database = client.db("RioCuarto");
+    const database = client.db("william");
     const cuadre = database.collection("cuadre");
 
     const fechaActual = fecha === '' ? new Date() : new Date(fecha);
