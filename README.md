@@ -34,7 +34,7 @@ Para probar o utilizar el servidor, es necesario:
 3. Ejecutar el servidor en tu entorno local.
 
 ```bash
-git clone https://github.com/tu-usuario/servidor-prestamos.git
-cd servidor-prestamos
+git clone https://github.com/tu-usuario/servidor-Express.git
+cd servidor-Express
 npm install
 npm start
